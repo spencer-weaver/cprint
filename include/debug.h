@@ -9,6 +9,7 @@
 #define DEBUG_COLOR CYAN
 #define ERROR_COLOR RED
 #define WARNING_COLOR YELLOW
+#define DATA_COLOR ITALICS
 
 #define DEBUG 3
 #define DATA 3
@@ -50,7 +51,7 @@
 
 #if DATA >= 1
     #define DATA1(p, data) print_##data(p)
-    #define MEMBER(name, value, space) PRETTY_MEMBER(GRAY, RED, name, value, " ", space)
+    #define MEMBER(name, value, space) PRETTY_MEMBER(DATA_COLOR, DATA_COLOR, name, value, " ", space)
 #else
     #define DATA1(p, data)
 #endif
