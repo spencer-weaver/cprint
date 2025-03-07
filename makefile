@@ -17,7 +17,7 @@ $(ODIR)/%.o: $(SDIR)/%.c $(DEPS) | $(ODIR)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 main: $(OBJ)
-	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
+	$(CC) -o cprint $^ $(CFLAGS) $(LIBS)
 
 test: main
 	./main
@@ -27,4 +27,4 @@ $(ODIR):
 
 .PHONY: clean
 clean:
-	rm -f $(ODIR)/*.o main
+	rm -f $(ODIR)/*.o cprint

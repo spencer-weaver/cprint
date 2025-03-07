@@ -1,10 +1,11 @@
 
+#include <stdio.h>
+#include <string.h>
 #include "debug.h"
 
-int main(void) {
-    MEMBER("member", "hello", "  ");
-    DEB1("message");
-    DEB2("message");
-    ERR1("uh oh");
-    ERR2("not bad");
+int main(int argc, char *argv[]) {
+    if (argc != 3) {
+        fprintf(stderr, "usage: %s <input_file> <output_file>\n", argv[0]);
+        return 1;
+    }
 }

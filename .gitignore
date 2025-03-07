@@ -1,2 +1,7 @@
+obj
 obj/*
 main
+tests
+tests/*
+include
+include/*
